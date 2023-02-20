@@ -1,0 +1,419 @@
+id: system-security
+name: System Security
+description: |
+  TODO: say something cool about system security.
+
+modules:
+
+- id: introduction
+  name: Introduction
+  description: Welcome to Computer Systems Security! This module will introduce you to the course and the concepts we'll be covering.
+  resources:
+  - name: "Introduction: What is Computer Systems Security"
+    type: lecture
+    video: bJTThdqui0g
+    playlist: PL-ymxv0nOtqrxUaIefx0qEC7_155oPEb7
+    slides: 1YlTxeZg03P234EgG4E4JNGcit6LZovAxfYGL1YSLwfc
+  - name: Further Reading
+    type: markdown
+    content: |
+      - An awesome intro series that covers some of the fundamentals from [LiveOverflow](https://www.youtube.com/watch?v=iyAyN3GFM7A&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&index=1).
+      - Phineas Fisher's [writeup](https://pwn.college/modules/intro/phisher-hackback.txt) of the hacking team disclosure (discussed in the What is Computer Systems Security video). Originally posted on pastebin by Phineas Fisher, but since removed.
+      - [Some more (mirrored) writeups](https://github.com/Alekseyyy/phineas-philes) from Phineas Fisher, for the curious.
+
+- id: sandboxing
+  name: Sandboxing
+  description: TODO
+  challenges:
+  - id: level-1
+    name: level1
+    description: Escape a basic chroot sandbox!
+  - id: level-2
+    name: level2
+    description: Escape a basic chroot sandbox by utilizing shellcode.
+  - id: level-3
+    name: level3
+    description: Escape a chroot sandbox with shellcode.
+  - id: level-4
+    name: level4
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"openat\", \"\
+      read\", \"write\", \"sendfile\"]"
+  - id: level-5
+    name: level5
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"linkat\", \"\
+      open\", \"read\", \"write\", \"sendfile\"]"
+  - id: level-6
+    name: level6
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"fchdir\", \"\
+      open\", \"read\", \"write\", \"sendfile\"]"
+  - id: level-7
+    name: level7
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"chdir\", \"\
+      chroot\", \"mkdir\", \"open\", \"read\", \"write\", \"sendfile\"]"
+  - id: level-8
+    name: level8
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"openat\", \"\
+      read\", \"write\", \"sendfile\"]"
+  - id: level-9
+    name: level9
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"close\", \"\
+      stat\", \"fstat\", \"lstat\"]"
+  - id: level-10
+    name: level10
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"read\", \"\
+      exit\"]. Note that \"write\" is disabled! You will need a creative way of extracting the flag data from your process!"
+  - id: level-11
+    name: level11
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"read\", \"\
+      nanosleep\"]. Note that \"write\" is disabled! You will need a creative way of extracting the flag data from your process!"
+  - id: level-12
+    name: level12
+    description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"read\"]. Note\
+      \ that \"write\" is disabled! You will need a creative way of extracting the flag data from your process!"
+  - id: level-13
+    name: level13
+    description: Escape a different kind of sandbox in which a jailed child process is only communicable to from a parent
+      process.
+  - id: level-14
+    name: level14
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what if
+      the sandbox is really sloppy?
+  - id: level-15
+    name: level15
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what are
+      the implications of sharing filesystems between the sandbox and host?
+  - id: level-16
+    name: level16
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what shenanigans
+      can you get up to with special kernel-backed filesystems?
+  - id: level-17
+    name: level17
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what happens
+      if you can smuggle in a resource from the outside?
+  - id: level-18
+    name: level18
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! What could
+      be the harm of mounting in a harmless directory?
+  resources:
+  - name: "Sandboxing: Introduction"
+    type: lecture
+    video: Ide_eg-eQZ0
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1TpMjTimroiC3Jm0dsteHWEUw06yZ5Oh7iM8YBmbOUkI
+  - name: "Sandboxing: chroot"
+    type: lecture
+    video: C81lO7pG5aA
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1AWl9Gko_L1kDLBtrTFB3EohQU4vQjykpQE5dm9uxYi0
+  - name: "Sandboxing: seccomp"
+    type: lecture
+    video: hrT1xvxGKS4
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1jOTktFSo-TwQklYdsOyC3f-2ba8XuJA8ZFWHjMQyQVI
+  - name: "Sandboxing: Escaping seccomp"
+    type: lecture
+    video: h1L9mF6PHlQ
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1tkBhW2JG-_jRaRDwSpuUYdT-Dg-odtZTdqanQu8vqow
+  - name: Tips, Tricks, and Further Reading
+    type: markdown
+    content: |
+      Some tips and tricks for the challenge problems!
+
+      - Be very careful to understand the timeline of what the challenge does. A file opened BEFORE `chroot()` is very different from a file opened AFTER `chroot()`. The sequence of actions makes a big difference.
+      - There aren't any restrictions on shellcode (other than syscalls), so we highly recommend making sure your shellcode exits cleanly. That will make it easier to debug.
+      - You can determine the value of constants such as `AT_FDCWD` by writing a quick C program that includes the relevant header files and does `printf("%d\n", AT_FDCWD);`.
+      - `chroot()` will fail if you're not running as root. `strace` causes the SUID bit to be ignored, so you must use `sudo strace` to properly trace these challenges. Of course, this will only be possible in practice mode.
+      - There is a known issue with strace that, in certain configurations, it will improperly resolve the syscall number of 32-bit syscalls in amd64. Using a newer Linux VM sometimes helps. If you're using `int 0x80` to trigger system calls, the 32-bit ones ARE being used; strace is just lying to you.
+      - On the subject of 32-bit syscalls: you do not have to assemble your shellcode in 32-bit mode (i.e., you don't need `-m32`). It is perfectly valid to just up and `int 0x80` in the middle of an otherwise-64-bit shellcode.
+      - Read [this](https://www.gnu.org/software/bash/manual/html_node/Redirections.html) thoroughly, especially Section 3.6.1.
+
+- id: race-conditions
+  name: Race Conditions
+  description: TODO
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: Exploit a basic race condition to get the flag.
+  - id: level-1-1
+    name: level1.1
+    description: Exploit a basic race condition to get the flag.
+  - id: level-2-0
+    name: level2.0
+    description: |-
+      Exploit a race condition with a tighter timing window to read the flag.
+      Keep in mind that tighter timing windows in race conditions generally are harder to exploit reliably!
+  - id: level-2-1
+    name: level2.1
+    description: |-
+      Exploit a race condition with a tighter timing window to read the flag.
+      Keep in mind that tighter timing windows in race conditions generally are harder to exploit reliably!
+  - id: level-3-0
+    name: level3.0
+    description: Exploit a race condtion to corrupt memory, affecting the behavior of the challenge.
+  - id: level-3-1
+    name: level3.1
+    description: Exploit a race condtion to corrupt memory, affecting the behavior of the challenge.
+  - id: level-4-0
+    name: level4.0
+    description: Exploit a race condition to corrupt memory and smash the stack!
+  - id: level-4-1
+    name: level4.1
+    description: Exploit a race condition to corrupt memory and smash the stack!
+  - id: level-5-0
+    name: level5.0
+    description: |-
+      Exploit a complex race condition to read the flag.
+      This race condition involves multiple steps, which makes it less reliable to exploit!
+  - id: level-5-1
+    name: level5.1
+    description: |-
+      Exploit a complex race condition to read the flag.
+      This race condition involves multiple steps, which makes it less reliable to exploit!
+  - id: level-6-0
+    name: level6.0
+    description: |-
+      Exploit a complex race condition to read the flag.
+      This race condition involves multiple steps, which makes it less reliable to exploit!
+  - id: level-6-1
+    name: level6.1
+    description: |-
+      Exploit a complex race condition to read the flag.
+      This race condition involves multiple steps, which makes it less reliable to exploit!
+  - id: level-7-0
+    name: level7.0
+    description: Exploit a race condition in a more realistic scenario to affect program behavior.
+  - id: level-7-1
+    name: level7.1
+    description: Exploit a race condition in a more realistic scenario to affect program behavior.
+  - id: level-8-0
+    name: level8.0
+    description: Utilize multiple connections to the same program to trigger a race condition, affecting program behavior!
+  - id: level-8-1
+    name: level8.1
+    description: Utilize multiple connections to the same program to trigger a race condition, affecting program behavior!
+  - id: level-9-0
+    name: level9.0
+    description: Utilize a race condition to leak information out of a program.
+  - id: level-9-1
+    name: level9.1
+    description: Utilize a race condition to leak information out of a program.
+  - id: level-10-0
+    name: level10.0
+    description: Utilize a race condition to leak information out of a program, but with additional difficulty, making the
+      race harder!
+  - id: level-10-1
+    name: level10.1
+    description: Utilize a race condition to leak information out of a program, but with additional difficulty, making the
+      race harder!
+  - id: level-11-0
+    name: level11.0
+    description: Utilize a race condition to leak information out of a program, but with *even more* additional difficulty,
+      making the race *even* harder!
+  - id: level-11-1
+    name: level11.1
+    description: Utilize a race condition to leak information out of a program, but with *even more* additional difficulty,
+      making the race *even* harder!
+  resources:
+  - name: "Race Conditions: Introduction"
+    type: lecture
+    video: jXQ8Y5B2sc0
+    playlist: PL-ymxv0nOtqq2SWDP1K1pXCpT6nkmyiXh
+    slides: 1cwaI8mwYBAj_GBrDqfCHM4_ansWHlkT5tBIFo8zJqsI
+  - name: "Race Conditions: Races in the Filesystem"
+    type: lecture
+    video: dpsWLu8jxBg
+    playlist: PL-ymxv0nOtqq2SWDP1K1pXCpT6nkmyiXh
+    slides: 1aMSJoBqDIY0cYwFwEa4uq4mzjScGzZDFbmkvVcrbF-4
+  - name: "Race Conditions: Processes and Threads"
+    type: lecture
+    video: _hDP1wZKkaI
+    playlist: PL-ymxv0nOtqq2SWDP1K1pXCpT6nkmyiXh
+    slides: 11Fq9HwG6yYB9fkEJ-ZJ4kHbu-hL4WizAiUoX9prPN8Y
+  - name: "Race Conditions: Races in Memory"
+    type: lecture
+    video: jNIgU4kI6wY
+    playlist: PL-ymxv0nOtqq2SWDP1K1pXCpT6nkmyiXh
+    slides: 1u-aSz-mqwkMIZEDAR-AEPKw5JPn-1q_3Ek_C6JjQUzY
+  - name: "Race Conditions: Signals and Reentrancy"
+    type: lecture
+    video: bPWQFhsUkbs
+    playlist: PL-ymxv0nOtqq2SWDP1K1pXCpT6nkmyiXh
+    slides: 1LOmzo79U_QmdggdfQwDej47886iqHIPDGXpl506_SYY
+
+- id: kernel-security
+  name: Kernel Security
+  description: TODO
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: Ease into kernel exploitation with this simple crackme level!
+  - id: level-1-1
+    name: level1.1
+    description: Ease into kernel exploitation with this simple crackme level!
+  - id: level-2-0
+    name: level2.0
+    description: Ease into kernel exploitation with another crackme level.
+  - id: level-2-1
+    name: level2.1
+    description: Ease into kernel exploitation with another crackme level.
+  - id: level-3-0
+    name: level3.0
+    description: Ease into kernel exploitation with another crackme level, this time with some privilege escalation (whoami?).
+  - id: level-3-1
+    name: level3.1
+    description: Ease into kernel exploitation with another crackme level, this time with some privilege escalation (whoami?).
+  - id: level-4-0
+    name: level4.0
+    description: Ease into kernel exploitation with another crackme level and learn how kernel devices communicate.
+  - id: level-4-1
+    name: level4.1
+    description: Ease into kernel exploitation with another crackme level and learn how kernel devices communicate.
+  - id: level-5-0
+    name: level5.0
+    description: Utilize your hacker skillset to communicate with a kernel device and get the flag.
+  - id: level-5-1
+    name: level5.1
+    description: Utilize your hacker skillset to communicate with a kernel device and get the flag.
+  - id: level-6-0
+    name: level6.0
+    description: Utilize a 'buggy' kernel device and shellcode to escalate privileges to root and get the flag!
+  - id: level-6-1
+    name: level6.1
+    description: Utilize a 'buggy' kernel device and shellcode to escalate privileges to root and get the flag!
+  - id: level-7-0
+    name: level7.0
+    description: Utilize a 'buggy' kernel device and shellcode to escalate privileges to root and get the flag!
+  - id: level-7-1
+    name: level7.1
+    description: Utilize a 'buggy' kernel device and shellcode to escalate privileges to root and get the flag!
+  - id: level-8-0
+    name: level8.0
+    description: Utilize a userspace binary to interact with a kernel device.
+  - id: level-8-1
+    name: level8.1
+    description: Utilize a userspace binary to interact with a kernel device.
+  - id: level-9-0
+    name: level9.0
+    description: Exploit a buggy kernel device to get the flag!
+  - id: level-9-1
+    name: level9.1
+    description: Exploit a buggy kernel device to get the flag!
+  - id: level-10-0
+    name: level10.0
+    description: Exploit a buggy kernel device with KASLR enabled to get the flag!
+  - id: level-10-1
+    name: level10.1
+    description: Exploit a buggy kernel device with KASLR enabled to get the flag!
+  - id: level-11-0
+    name: level11.0
+    description: Exploit a kernel device utilizing a userspace binary, with a twist!
+  - id: level-11-1
+    name: level11.1
+    description: Exploit a kernel device utilizing a userspace binary, with a twist!
+  - id: level-12-0
+    name: level12.0
+    description: Exploit a kernel device utilizing a userspace binary, with a twist!
+  - id: level-12-1
+    name: level12.1
+    description: Exploit a kernel device utilizing a userspace binary, with a twist!
+  resources:
+  - name: "Kernel: Introduction"
+    type: lecture
+    video: j0I2AakUAxk
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1oUaPUtLIDEMcK49gwvEMmXTyMBVQAeCWvSONV3OkIio
+  - name: "Kernel: Environment Setup"
+    type: lecture
+    video: mDn5IxMetgQ
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1Ik7EWjn_9ywzCW3MpJJ0eVdIvhIMP6brObBQQDtYDCo
+  - name: "Kernel: Kernel Modules"
+    type: lecture
+    video: DLWBWeN2ebM
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1JP1VBpK-kapHanMT4rAF9UtGglId_ZXD2Xh46gPQZFM
+  - name: "Kernel: Privilege Escalation"
+    type: lecture
+    video: 8ty-IFWvuHM
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1tcR4YsVhN2kVUfe8RJw56dtSs-QOwp4-g8qgI0Q3kFM
+  - name: "Kernel: Escaping Seccomp"
+    type: lecture
+    video: mKzUA3j6myg
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1YMlOERClX6Yi8Fb9DYxBBJ5MYB1C-_F75XKkoSmbl8k
+  - name: "Kernel Security: Memory Management"
+    type: lecture
+    video: SygLhZUTmKQ
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1NuvKHcszim25_kNBs5zjYEQYR8xjsLHK14GX8_9wFbE
+  - name: "Kernel Security: Mitigations"
+    type: lecture
+    video: 8nWw8jlQnew
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 1DNxufs_WlQRkzBMjPD7UE1qRrd87XDGpfQSPkiajEyE
+  - name: "Kernel Security: Writing Kernel Shellcode"
+    type: lecture
+    video: L9dJNJDIa5M
+    playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
+    slides: 10Wr3Lj08N-MNZkrk_0WwSG2QgnbLB4cqJsZpNjKj8pI
+  - name: Further Reading
+    type: markdown
+    content: |
+      - Some [notes to Linux Virtual Memory management](https://github.com/lorenzo-stoakes/linux-mm-notes).
+      - A [collection of links](https://github.com/xairy/linux-kernel-exploitation) related to Linux kernel security and exploitation.
+      - An awesome series on [OS haxx0ring](https://youtube.com/playlist?list=PLMOpZvQB55bcRA5-KjvW7dVyGUarcqZuL) from the perspective of an OS developer.
+
+- id: system-exploitation
+  name: System Exploitation
+  description: TODO
+  challenges:
+  - id: level-1-0
+    name: level1.0
+    description: TODO
+  - id: level-1-1
+    name: level1.1
+    description: TODO
+  - id: level-2-0
+    name: level2.0
+    description: TODO
+  - id: level-2-1
+    name: level2.1
+    description: TODO
+  - id: level-3-0
+    name: level3.0
+    description: TODO
+  - id: level-3-1
+    name: level3.1
+    description: TODO
+  - id: level-4-0
+    name: level4.0
+    description: TODO
+  - id: level-4-1
+    name: level4.1
+    description: TODO
+  - id: level-5-0
+    name: level5.0
+    description: TODO
+  - id: level-5-1
+    name: level5.1
+    description: TODO
+  - id: level-6-0
+    name: level6.0
+    description: TODO
+  - id: level-6-1
+    name: level6.1
+    description: TODO
+  - id: level-7-0
+    name: level7.0
+    description: TODO
+  - id: level-7-1
+    name: level7.1
+    description: TODO
+  - id: level-8-0
+    name: level8.0
+    description: TODO
+  - id: level-8-1
+    name: level8.1
+    description: TODO
