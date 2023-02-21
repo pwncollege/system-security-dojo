@@ -3,6 +3,8 @@ name: System Security
 description: |
   TODO: say something cool about system security.
 
+type: topic
+
 modules:
 
 - id: introduction
