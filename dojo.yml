@@ -1,7 +1,12 @@
 id: system-security
 name: System Security
 description: |
-  TODO: say something cool about system security.
+  Our world is built on a foundation of sand.
+  You have seen the insecurities with individual programs.
+  Consider that these programs, in turn, are pressed together into complex systems.
+  Humanity tries its best, but the parts of systems do not fit perfectly, and gaps of insecurity abound within the seams.
+  Hackers know the art of sneaking through these gaps, and now, you have reached the point of your journey where you shall develop this art as well.
+  Push through, and join us on the other side.
 
 type: topic
 
