@@ -137,7 +137,12 @@ modules:
 
 - id: race-conditions
   name: Race Conditions
-  description: TODO
+  description: |
+    Imagine you're in an adrenaline-pumping race against time, where two or more programs are fiercely competing to access or change shared data.
+    This is the thrilling world of race condition exploits! Like daring hackers sliding under closing security gates, these exploits sneak in at just the right millisecond to alter data, causing the system to act in unexpected and often disastrous ways.
+    In this digital race, a split-second can spell the difference between security and breach, creating a high-stakes drama that unfolds in the blink of an eye.
+    By mastering the mechanics of race conditions, you're not just learning to code, you're stepping into a realm where timing is everything, and the prize is the fortification or exploitation of system vulnerabilities.
+    Your code becomes a high-speed racer on the track of system resources, and understanding race conditions is your ticket to the winner's circle!
   challenges:
   - id: level-1-0
     name: level1.0
