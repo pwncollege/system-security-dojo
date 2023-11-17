@@ -379,53 +379,54 @@ modules:
 
 - id: system-exploitation
   name: System Exploitation
-  description: TODO
+  description: Step into the realm of system exploitation, where moving from user land to the kernel echoes the fluidity and precision of a martial artist transitioning between stances. In userland, you'll apply foundational techniques, preparing for the strategic leap into the kernel, akin to a perfectly executed flying kick.  You'll land in the kernel with an electrifying strike of technical mastery and strategic brilliance to deliver the final blow.
+
   challenges:
   - id: level-1-0
     name: level1.0
-    description: TODO
+    description: Take advantage of yan85.. in the kernel!
   - id: level-1-1
     name: level1.1
-    description: TODO
+    description: Take advantage of yan85.. in the kernel!
   - id: level-2-0
     name: level2.0
-    description: TODO
+    description: Defeat yan85's seccomp implementation.
   - id: level-2-1
     name: level2.1
-    description: TODO
+    description: Defeat yan85's seccomp implementation.
   - id: level-3-0
     name: level3.0
-    description: TODO
+    description: Introducing... multiple ypus!
   - id: level-3-1
     name: level3.1
-    description: TODO
+    description: Introducing... multiple ypus!
   - id: level-4-0
     name: level4.0
-    description: TODO
+    description: Exploit a userland binary with mutexes.
   - id: level-4-1
     name: level4.1
-    description: TODO
+    description: Exploit a userland binary with mutexes.
   - id: level-5-0
     name: level5.0
-    description: TODO
+    description: Exploit the userland binary to run multiple ypus.
   - id: level-5-1
     name: level5.1
-    description: TODO
+    description: Exploit the userland binary to run multiple ypus.
   - id: level-6-0
     name: level6.0
-    description: TODO
+    description: Exploit the userland binary to run multiple ypus.
   - id: level-6-1
     name: level6.1
-    description: TODO
+    description: Exploit the userland binary to run multiple ypus.
   - id: level-7-0
     name: level7.0
-    description: TODO
+    description: Circumvent yan85's output sanitization.
   - id: level-7-1
     name: level7.1
-    description: TODO
+    description: Circumvent yan85's output sanitization.
   - id: level-8-0
     name: level8.0
-    description: TODO
+    description: Circumvent yan85's output sanitization with KASLR.
   - id: level-8-1
     name: level8.1
-    description: TODO
+    description: Circumvent yan85's output sanitization with KASLR.
