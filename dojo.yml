@@ -29,7 +29,7 @@ modules:
     type: markdown
     content: |
       - An awesome intro series that covers some of the fundamentals from [LiveOverflow](https://www.youtube.com/watch?v=iyAyN3GFM7A&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&index=1).
-      - Phineas Fisher's [writeup](https://pwn.college/modules/intro/phisher-hackback.txt) of the hacking team disclosure (discussed in the What is Computer Systems Security video). Originally posted on pastebin by Phineas Fisher, but since removed.
+      - Phineas Fisher's [writeup](https://static.pwn.college/modules/intro/phisher-hackback.txt) of the hacking team disclosure (discussed in the What is Computer Systems Security video). Originally posted on pastebin by Phineas Fisher, but since removed.
       - [Some more (mirrored) writeups](https://github.com/Alekseyyy/phineas-philes) from Phineas Fisher, for the curious.
 
 - id: sandboxing
