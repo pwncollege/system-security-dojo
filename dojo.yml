@@ -256,6 +256,14 @@ modules:
     video: bPWQFhsUkbs
     playlist: PL-ymxv0nOtqq2SWDP1K1pXCpT6nkmyiXh
     slides: 1LOmzo79U_QmdggdfQwDej47886iqHIPDGXpl506_SYY
+  - name: "Race Conditions: Namespacing Live sesssion 1"
+    type: lecture
+    video: -Xd22KjZwJk
+    playlist: PL-ymxv0nOtqqQzEncNuE6jetlJAiBUda-
+  - name: "Race Conditions: Namespacing Live sesssion 2"
+    type: lecture
+    video: -Xd22KjZwJk
+    playlist: PL-ymxv0nOtqqQzEncNuE6jetlJAiBUda-
 
 - id: kernel-security
   name: Kernel Security
