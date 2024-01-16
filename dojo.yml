@@ -129,11 +129,9 @@ modules:
   - name: "Sandboxing: Namespacing Live Sesssion 1"
     type: lecture
     video: -Xd22KjZwJk
-    playlist: PL-ymxv0nOtqqQzEncNuE6jetlJAiBUda-
   - name: "Sandboxing: Namespacing Live Sesssion 2"
     type: lecture
-    video: -Xd22KjZwJk
-    playlist: PL-ymxv0nOtqqQzEncNuE6jetlJAiBUda-
+    video: ty_IJiaWh-0
   - name: Tips, Tricks, and Further Reading
     type: markdown
     content: |
