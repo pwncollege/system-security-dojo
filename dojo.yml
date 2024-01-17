@@ -386,6 +386,7 @@ modules:
       - Some [notes to Linux Virtual Memory management](https://github.com/lorenzo-stoakes/linux-mm-notes).
       - A [collection of links](https://github.com/xairy/linux-kernel-exploitation) related to Linux kernel security and exploitation.
       - An awesome series on [OS haxx0ring](https://youtube.com/playlist?list=PLMOpZvQB55bcRA5-KjvW7dVyGUarcqZuL) from the perspective of an OS developer.
+      - A [blog/walkthrough](https://zolutal.github.io/understanding-paging) on x86_64 virtual address translation.
 
 - id: system-exploitation
   name: System Exploitation
