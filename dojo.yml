@@ -1,5 +1,6 @@
 id: system-security
 name: System Security
+image: pwncollege/challenge-legacy:latest
 
 award:
   belt: green
