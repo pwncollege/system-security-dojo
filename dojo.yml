@@ -389,6 +389,10 @@ modules:
       - An awesome series on [OS haxx0ring](https://youtube.com/playlist?list=PLMOpZvQB55bcRA5-KjvW7dVyGUarcqZuL) from the perspective of an OS developer.
       - A [blog/walkthrough](https://zolutal.github.io/understanding-paging) on x86_64 virtual address translation.
 
+- import:
+    dojo: intro-to-cybersecurity
+    module: speculative-execution
+
 - id: system-exploitation
   name: System Exploitation
   description: Step into the realm of system exploitation, where moving from user land to the kernel echoes the fluidity and precision of a martial artist transitioning between stances. In userland, you'll apply foundational techniques, preparing for the strategic leap into the kernel, akin to a perfectly executed flying kick.  You'll land in the kernel with an electrifying strike of technical mastery and strategic brilliance to deliver the final blow.
