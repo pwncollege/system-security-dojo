@@ -390,7 +390,7 @@ modules:
       - A [blog/walkthrough](https://zolutal.github.io/understanding-paging) on x86_64 virtual address translation.
 
 - import:
-    dojo: intro-to-cybersecurity
+    dojo: software-exploitation
     module: speculative-execution
 
 - id: system-exploitation
