@@ -9,105 +9,105 @@ challenges:
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level1
+    challenge: level1
 - id: babyarch-parsemultipage
   name: level2
   description: A binary that side-channels itself, now using multiple pages.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level2
+    challenge: level2
 - id: babyarch-measuretiming
   name: level3
   description: Measure memory access timings to leak the flag via a side-channel.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level3
+    challenge: level3
 - id: babyarch-writeall
   name: level4
   description: Perform a full flush and reload side-channel attack!
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level4
+    challenge: level4
 - id: babyarch-speculate
   name: level5
   description: This binary never reads the flag bytes.. or does it?
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level5
+    challenge: level5
 - id: level6
   name: level6
   description: Perform a flush and reload attack to obtain the flag.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-1
+    challenge: level-1
 - id: level7
   name: level7
   description: Locate the flag in memory using shellcode, you will only have access to the "exit" system call.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-2
+    challenge: level-2
 - id: level7-1
   name: level7.1
   description: Locate the flag in memory using shellcode after all references to it have been DESTROYED, you will only have access to the "exit" system call. You will need a creative way of locating the flag's address in your process!
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-2-1
+    challenge: level-2-1
 - id: level8
   name: level8
   description: Use a speculative bounds check bypass which accesses a page mapped in userspace to leak the flag.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-3
+    challenge: level-3
 - id: level9
   name: level9
   description: Use a speculative indirect call which accesses a page mapped in userspace to leak the flag.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-4
+    challenge: level-4
 - id: level10
   name: level10
   description: Use a cache side channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-5
+    challenge: level-5
 - id: level11
   name: level11
   description: Use a Spectre v1 channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-6
+    challenge: level-6
 - id: level12
   name: level12
   description: Use a Spectre v2 side channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-7
+    challenge: level-7
 - id: level13
   name: level13
   description: Use meltdown to read the flag from the kernel module's memory.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-8
+    challenge: level-8
 - id: level14
   name: level14
   description: Leak the flag via meltdown from another process after getting the address of its task_struct from the kernel module and using it to find and walk its page tables.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    module: level-9
+    challenge: level-9
 resources:
   - name: "Microarchitecture Exploitation - Below Assembly"
     type: lecture
