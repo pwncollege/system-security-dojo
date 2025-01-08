@@ -9,35 +9,35 @@ challenges:
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    challenge: level1
+    challenge: babyarch-parseonepage
 - id: babyarch-parsemultipage
   name: level2
   description: A binary that side-channels itself, now using multiple pages.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    challenge: level2
+    challenge: babyarch-parsemultipage
 - id: babyarch-measuretiming
   name: level3
   description: Measure memory access timings to leak the flag via a side-channel.
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    challenge: level3
+    challenge: babyarch-measuretiming
 - id: babyarch-writeall
   name: level4
   description: Perform a full flush and reload side-channel attack!
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    challenge: level4
+    challenge: babyarch-writeall
 - id: babyarch-speculate
   name: level5
   description: This binary never reads the flag bytes.. or does it?
   transfer:
     dojo: software-exploitation
     module: speculative-execution
-    challenge: level5
+    challenge: babyarch-speculate
 - id: level6
   name: level6
   description: Perform a flush and reload attack to obtain the flag.
