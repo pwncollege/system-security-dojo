@@ -29,7 +29,30 @@
 #include <limits.h>
 #include <sched.h>
 
-char hostname[128];
+long getvendor(char *name, size_t len) {
+    int fd = open("/sys/devices/virtual/dmi/id/sys_vendor", O_RDONLY);
+    if (fd == -1) {
+        return -1;
+    }
+
+    long nbytes = read(fd, name, len - 1);
+    if (nbytes == -1) {
+        close(fd);
+        return -1;
+    }
+
+    name[nbytes] = '\0';
+
+    size_t read_len = strlen(name);
+    if (read_len > 0 && name[read_len - 1] == '\n') {
+        name[read_len - 1] = '\0';
+    }
+
+    close(fd);
+    return nbytes;
+}
+
+char vendor[128];
 
 int main(int argc, char **argv, char **envp)
 {
@@ -43,8 +66,8 @@ int main(int argc, char **argv, char **envp)
     printf("###\n");
     printf("\n");
 
-    gethostname(hostname, 128);
-    if (strstr(hostname, "-level") && !strstr(hostname, "vm_"))
+    getvendor(vendor, 128);
+    if (strcmp(vendor, "QEMU"))
     {
         puts("ERROR: in the dojo, this challenge MUST run in virtualization mode.");
         puts("Please run `vm connect` to launch and connect to the Virtual Machine, then run this challenge inside the VM.");
