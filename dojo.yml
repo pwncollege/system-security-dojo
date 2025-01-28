@@ -35,7 +35,11 @@ modules:
 
 - id: sandboxing
   name: Sandboxing
-  description: Computer security sandboxing refers to a technique used to isolate potentially malicious code or untrusted programs, ensuring they run in a confined environment where they cannot cause harm to the broader system. By creating a 'sandbox' or restricted space for these programs to operate in, any malicious actions are confined to this isolated area, preventing potential damage to the host system or access to sensitive data.  This module explores sandboxing techniques as well as how hackers can escape a misconfigured sandbox.
+  description: |
+  Computer security sandboxing refers to a technique used to isolate potentially malicious code or untrusted programs, ensuring they run in a confined environment where they cannot cause harm to the broader system. By creating a 'sandbox' or restricted space for these programs to operate in, any malicious actions are confined to this isolated area, preventing potential damage to the host system or access to sensitive data.  This module explores sandboxing techniques as well as how hackers can escape a misconfigured sandbox.
+
+  Note, levels 14+ of the sandboxing challenges must be ran inside a virtual machine.  This virtual machine can be launched using the `vm connect` command while at a terminal.
+
   challenges:
   - id: level-1
     name: level1
