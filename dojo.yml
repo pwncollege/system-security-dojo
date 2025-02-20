@@ -270,7 +270,10 @@ modules:
 
 - id: kernel-security
   name: Kernel Security
-  description: The kernel is the core component of an operating system, serving as the bridge between software and hardware. Operating at the lowest level of the OS, the kernel's access is so profound that it can be likened to impersonating the system itself, surpassing even the highest privileges of a root user. Kernel security is paramount because a breach at this level allows attackers to act as if they are the system. Vulnerabilities can lead to scenarios like unauthorized data access, system crashes, or the silent installation of rootkits.
+  description: |
+    The kernel is the core component of an operating system, serving as the bridge between software and hardware. Operating at the lowest level of the OS, the kernel's access is so profound that it can be likened to impersonating the system itself, surpassing even the highest privileges of a root user. Kernel security is paramount because a breach at this level allows attackers to act as if they are the system. Vulnerabilities can lead to scenarios like unauthorized data access, system crashes, or the silent installation of rootkits.
+
+    In order to get started on kernel challenges, you will need to run the challenges inside a virtual machine.  You can start this VM done by running a command while at a terminal, `vm start`.  The virtual machine will automatically load the kernel module located in the `/challenge` directory.  You can then connect your terminal to this virtual machine with `vm connect`!
   challenges:
   - id: level-1-0
     name: level1.0
