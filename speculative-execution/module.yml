@@ -8,94 +8,42 @@ challenges:
 - id: babyarch-parseonepage
   name: Baby Spectre 1
   description: Get started with a binary that side-channels itself!
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: babyarch-parseonepage
 - id: babyarch-parsemultipage
   name: Baby Spectre 2
   description: A binary that side-channels itself, now using multiple pages.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: babyarch-parsemultipage
 - id: babyarch-measuretiming
   name: Baby Spectre 3
   description: Measure memory access timings to leak the flag via a side-channel.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: babyarch-measuretiming
 - id: babyarch-writeall
   name: Baby Spectre 4
   description: Perform a full flush and reload side-channel attack!
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: babyarch-writeall
 - id: babyarch-speculate
   name: Baby Spectre 5
   description: This binary never reads the flag bytes.. or does it?
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: babyarch-speculate
 - id: level7-1
   name: Prefetch Peek
   description: Locate the flag in memory using shellcode after all references to it have been DESTROYED, you will only have access to the "exit" system call. You will need a creative way of locating the flag's address in your process!
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-2-1
 - id: level8
   name: Spooky Spectre 1
   description: Use a speculative bounds check bypass which accesses a page mapped in userspace to leak the flag.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-3
 - id: level9
   name: Spooky Spectre 2
   description: Use a speculative indirect call which accesses a page mapped in userspace to leak the flag.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-4
 - id: level10
   name: Yan85 Reloaded
   description: Use a cache side channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-5
 - id: level11
   name: Ghost in the YPU 1
   description: Use a Spectre v1 channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-6
 - id: level12
   name: Ghost in the YPU 2
   description: Use a Spectre v2 side channel triggered through y85 shellcode which accesses a page mapped in userspace to leak the flag.
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-7
 - id: level13
   name: Molten Access
   description: Use meltdown to read the flag from the kernel module's memory.  Note - This challenge must be executed inside the VM!
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-8
 - id: level14
   name: Molten Walk
   description: Leak the flag via meltdown from another process after getting the address of its task_struct from the kernel module and using it to find and walk its page tables.  Note - This challenge must be executed inside the VM!
-  transfer:
-    dojo: software-exploitation
-    module: speculative-execution
-    challenge: level-9
 resources:
   - name: "Microarchitecture Exploitation - Below Assembly"
     type: lecture
