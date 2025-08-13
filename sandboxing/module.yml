@@ -33,15 +33,15 @@ resources:
   slides: 1AWl9Gko_L1kDLBtrTFB3EohQU4vQjykpQE5dm9uxYi0
 - id: level-1
   type: challenge
-  name: level1
+  name: chroot-escape-basic
   description: Escape a basic chroot sandbox!
 - id: level-2
   type: challenge
-  name: level2
+  name: chroot-shellcode
   description: Escape a basic chroot sandbox by utilizing shellcode.
 - id: level-3
   type: challenge
-  name: level3
+  name: chroot-proper
   description: Escape a chroot sandbox with shellcode.
 
 - type: header
@@ -57,52 +57,52 @@ resources:
   playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
   slides: 1tkBhW2JG-_jRaRDwSpuUYdT-Dg-odtZTdqanQu8vqow
 - id: level-4
-  name: level4
+  name: seccomp-basic
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"openat\", \"\
     read\", \"write\", \"sendfile\"]"
 - id: level-5
-  name: level5
+  name: seccomp-linkat
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"linkat\", \"\
     open\", \"read\", \"write\", \"sendfile\"]"
 - id: level-6
-  name: level6
+  name: seccomp-fchdir
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"fchdir\", \"\
     open\", \"read\", \"write\", \"sendfile\"]"
 - id: level-7
-  name: level7
+  name: seccomp-rechroot
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"chdir\", \"\
     chroot\", \"mkdir\", \"open\", \"read\", \"write\", \"sendfile\"]"
 - id: level-8
-  name: level8
+  name: seccomp-only
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"openat\", \"\
     read\", \"write\", \"sendfile\"]"
 - id: level-9
-  name: level9
+  name: seccomp-arch32
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"close\", \"\
     stat\", \"fstat\", \"lstat\"]"
 - id: level-10
-  name: level10
+  name: seccomp-minimal
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"read\", \"\
     exit\"]. Note that \"write\" is disabled! You will need a creative way of extracting the flag data from your process!"
 - id: level-11
-  name: level11
+  name: seccomp-timebased
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"read\", \"\
     nanosleep\"]. Note that \"write\" is disabled! You will need a creative way of extracting the flag data from your process!"
 - id: level-12
-  name: level12
+  name: seccomp-readonly
   type: challenge
   description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"read\"]. Note\
     \ that \"write\" is disabled! You will need a creative way of extracting the flag data from your process!"
 - id: level-13
-  name: level13
+  name: process-isolation
   type: challenge
   description: Escape a different kind of sandbox in which a jailed child process is only communicable to from a parent
     process.
@@ -119,31 +119,31 @@ resources:
   type: lecture
   video: ty_IJiaWh-0
 - id: level-14
-  name: level14
+  name: mount-namespace
   type: challenge
   privileged: true
   description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what if
     the sandbox is really sloppy?
 - id: level-15
-  name: level15
+  name: mount-cleanup
   type: challenge
   privileged: true
   description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what are
     the implications of sharing filesystems between the sandbox and host?
 - id: level-16
-  name: level16
+  name: mount-readonly
   type: challenge
   privileged: true
   description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what shenanigans
     can you get up to with special kernel-backed filesystems?
 - id: level-17
-  name: level17
+  name: mount-shellcode
   type: challenge
   privileged: true
   description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what happens
     if you can smuggle in a resource from the outside?
 - id: level-18
-  name: level18
+  name: mount-bindmount
   type: challenge
   privileged: true
   description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! What could
