@@ -31,7 +31,6 @@ resources:
   video: C81lO7pG5aA
   playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
   slides: 1AWl9Gko_L1kDLBtrTFB3EohQU4vQjykpQE5dm9uxYi0
-challenges:
 - id: level-1
   type: challenge
   name: level1
