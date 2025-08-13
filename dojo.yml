@@ -40,6 +40,32 @@ modules:
 
     Note, levels 14+ of the sandboxing challenges must be ran inside a virtual machine.  This virtual machine can be launched using the `vm connect` command while at a terminal.
 
+  resources:
+  - name: "Sandboxing: Introduction"
+    type: lecture
+    video: Ide_eg-eQZ0
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1TpMjTimroiC3Jm0dsteHWEUw06yZ5Oh7iM8YBmbOUkI
+  - name: Tips, Tricks, and Further Reading
+    type: markdown
+    content: |
+      Some tips and tricks for the challenge problems!
+
+      - Be very careful to understand the timeline of what the challenge does. A file opened BEFORE `chroot()` is very different from a file opened AFTER `chroot()`. The sequence of actions makes a big difference.
+      - There aren't any restrictions on shellcode (other than syscalls), so we highly recommend making sure your shellcode exits cleanly. That will make it easier to debug.
+      - You can determine the value of constants such as `AT_FDCWD` by writing a quick C program that includes the relevant header files and does `printf("%d\n", AT_FDCWD);`.
+      - `chroot()` will fail if you're not running as root. `strace` causes the SUID bit to be ignored, so you must use `sudo strace` to properly trace these challenges. Of course, this will only be possible in practice mode.
+      - There is a known issue with strace that, in certain configurations, it will improperly resolve the syscall number of 32-bit syscalls in amd64. Using a newer Linux VM sometimes helps. If you're using `int 0x80` to trigger system calls, the 32-bit ones ARE being used; strace is just lying to you.
+      - On the subject of 32-bit syscalls: you do not have to assemble your shellcode in 32-bit mode (i.e., you don't need `-m32`). It is perfectly valid to just up and `int 0x80` in the middle of an otherwise-64-bit shellcode.
+      - Read [this](https://www.gnu.org/software/bash/manual/html_node/Redirections.html) thoroughly, especially Section 3.6.1.
+
+  - type: header
+    content: Filesystem Sandboxing
+  - name: "Sandboxing: chroot"
+    type: lecture
+    video: C81lO7pG5aA
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1AWl9Gko_L1kDLBtrTFB3EohQU4vQjykpQE5dm9uxYi0
   challenges:
   - id: level-1
     name: level1
@@ -50,6 +76,19 @@ modules:
   - id: level-3
     name: level3
     description: Escape a chroot sandbox with shellcode.
+
+  - type: header
+    content: System Call Sandboxing
+  - name: "Sandboxing: seccomp"
+    type: lecture
+    video: hrT1xvxGKS4
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1jOTktFSo-TwQklYdsOyC3f-2ba8XuJA8ZFWHjMQyQVI
+  - name: "Sandboxing: Escaping seccomp"
+    type: lecture
+    video: h1L9mF6PHlQ
+    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
+    slides: 1tkBhW2JG-_jRaRDwSpuUYdT-Dg-odtZTdqanQu8vqow
   - id: level-4
     name: level4
     description: "Escape a chroot sandbox using shellcode, but this time only using the following syscalls: [\"openat\", \"\
@@ -90,65 +129,43 @@ modules:
     name: level13
     description: Escape a different kind of sandbox in which a jailed child process is only communicable to from a parent
       process.
-  - id: level-14
-    name: level14
-    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what if
-      the sandbox is really sloppy?
-  - id: level-15
-    name: level15
-    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what are
-      the implications of sharing filesystems between the sandbox and host?
-  - id: level-16
-    name: level16
-    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what shenanigans
-      can you get up to with special kernel-backed filesystems?
-  - id: level-17
-    name: level17
-    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what happens
-      if you can smuggle in a resource from the outside?
-  - id: level-18
-    name: level18
-    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! What could
-      be the harm of mounting in a harmless directory?
-  resources:
-  - name: "Sandboxing: Introduction"
-    type: lecture
-    video: Ide_eg-eQZ0
-    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
-    slides: 1TpMjTimroiC3Jm0dsteHWEUw06yZ5Oh7iM8YBmbOUkI
-  - name: "Sandboxing: chroot"
-    type: lecture
-    video: C81lO7pG5aA
-    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
-    slides: 1AWl9Gko_L1kDLBtrTFB3EohQU4vQjykpQE5dm9uxYi0
-  - name: "Sandboxing: seccomp"
-    type: lecture
-    video: hrT1xvxGKS4
-    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
-    slides: 1jOTktFSo-TwQklYdsOyC3f-2ba8XuJA8ZFWHjMQyQVI
-  - name: "Sandboxing: Escaping seccomp"
-    type: lecture
-    video: h1L9mF6PHlQ
-    playlist: PL-ymxv0nOtqoxTT-GIMLKt_i4zPKi2HlI
-    slides: 1tkBhW2JG-_jRaRDwSpuUYdT-Dg-odtZTdqanQu8vqow
+
+
+
+
+  - type: header
+    content: Sandboxing via Namespaces
   - name: "Sandboxing: Namespacing Live Sesssion 1"
     type: lecture
     video: -Xd22KjZwJk
   - name: "Sandboxing: Namespacing Live Sesssion 2"
     type: lecture
     video: ty_IJiaWh-0
-  - name: Tips, Tricks, and Further Reading
-    type: markdown
-    content: |
-      Some tips and tricks for the challenge problems!
-
-      - Be very careful to understand the timeline of what the challenge does. A file opened BEFORE `chroot()` is very different from a file opened AFTER `chroot()`. The sequence of actions makes a big difference.
-      - There aren't any restrictions on shellcode (other than syscalls), so we highly recommend making sure your shellcode exits cleanly. That will make it easier to debug.
-      - You can determine the value of constants such as `AT_FDCWD` by writing a quick C program that includes the relevant header files and does `printf("%d\n", AT_FDCWD);`.
-      - `chroot()` will fail if you're not running as root. `strace` causes the SUID bit to be ignored, so you must use `sudo strace` to properly trace these challenges. Of course, this will only be possible in practice mode.
-      - There is a known issue with strace that, in certain configurations, it will improperly resolve the syscall number of 32-bit syscalls in amd64. Using a newer Linux VM sometimes helps. If you're using `int 0x80` to trigger system calls, the 32-bit ones ARE being used; strace is just lying to you.
-      - On the subject of 32-bit syscalls: you do not have to assemble your shellcode in 32-bit mode (i.e., you don't need `-m32`). It is perfectly valid to just up and `int 0x80` in the middle of an otherwise-64-bit shellcode.
-      - Read [this](https://www.gnu.org/software/bash/manual/html_node/Redirections.html) thoroughly, especially Section 3.6.1.
+  - id: level-14
+    name: level14
+    privileged: true
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what if
+      the sandbox is really sloppy?
+  - id: level-15
+    name: level15
+    privileged: true
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what are
+      the implications of sharing filesystems between the sandbox and host?
+  - id: level-16
+    name: level16
+    privileged: true
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what shenanigans
+      can you get up to with special kernel-backed filesystems?
+  - id: level-17
+    name: level17
+    privileged: true
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! But what happens
+      if you can smuggle in a resource from the outside?
+  - id: level-18
+    name: level18
+    privileged: true
+    description: Learn the implications of a different way of sandboxing, using modern namespacing techniques! What could
+      be the harm of mounting in a harmless directory?
 
 - id: race-conditions
   name: Race Conditions
