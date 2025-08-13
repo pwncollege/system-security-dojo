@@ -273,6 +273,11 @@ modules:
     video: L9dJNJDIa5M
     playlist: PL-ymxv0nOtqowTpJEW4XTiGQYx6iwa6og
     slides: 10Wr3Lj08N-MNZkrk_0WwSG2QgnbLB4cqJsZpNjKj8pI
+  - name: "The VM"
+    type: markdown
+    content: |
+      These challenges need to be solved in a _virtual machine_!
+      You can launch with the virtual machine using the `vm` command, then interact with the challenges.
   - name: Further Reading
     type: markdown
     content: |
