@@ -8,9 +8,11 @@ challenges:
 - id: babyarch-memflag
   name: Shared Memory 1
   description: Get started with interacting with processes via shared memory.
+  required: false
 - id: babyarch-memflagsem
   name: Shared Memory 2
   description: Get started with interacting with processes via shared memory.
+  required: false
 - id: babyarch-parseonepage
   name: Baby Spectre 1
   description: Get started with a binary that side-channels itself!
