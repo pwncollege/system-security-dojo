@@ -62,10 +62,10 @@ modules:
       Keep in mind that tighter timing windows in race conditions generally are harder to exploit reliably!
   - id: level-3-0
     name: level3.0
-    description: Exploit a race condtion to corrupt memory, affecting the behavior of the challenge.
+    description: Exploit a race condition to corrupt memory, affecting the behavior of the challenge.
   - id: level-3-1
     name: level3.1
-    description: Exploit a race condtion to corrupt memory, affecting the behavior of the challenge.
+    description: Exploit a race condition to corrupt memory, affecting the behavior of the challenge.
   - id: level-4-0
     name: level4.0
     description: Exploit a race condition to corrupt memory and smash the stack!
