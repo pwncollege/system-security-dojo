@@ -110,10 +110,10 @@ resources:
 
 - type: header
   content: Sandboxing via Namespaces
-- name: "Sandboxing: Namespacing Live Sesssion 1"
+- name: "Sandboxing: Namespacing Live Session 1"
   type: lecture
   video: -Xd22KjZwJk
-- name: "Sandboxing: Namespacing Live Sesssion 2"
+- name: "Sandboxing: Namespacing Live Session 2"
   type: lecture
   video: ty_IJiaWh-0
 - id: level-14
